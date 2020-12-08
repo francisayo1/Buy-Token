@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="64dp"
+            android:text="What Do You Want To Do?"
+            android:textColor="#000000"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/cv_electricity"
+            app:layout_constraintHorizontal_bias="0.2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cv_tv"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+
+            app:cardElevation="10dp"
+            app:layout_constraintBottom_toTopOf="@+id/cv_phone"
+            app:layout_constraintStart_toStartOf="@+id/cv_internet"
+            app:layout_constraintTop_toBottomOf="@+id/cv_internet">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+
+                <ImageView
+                    android:id="@+id/im_tv"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+
+
+                    app:layout_constraintEnd_toStartOf="@+id/tv_payTvBills"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/tv_icon" />
+
+                <ImageView
+                    android:id="@+id/im_tv_next"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_payTvBills"
+
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/tv_payTvBills"
+                    app:layout_constraintTop_toTopOf="@+id/tv_payTvBills"
+                    app:srcCompat="@drawable/next_icon" />
+
+                <TextView
+                    android:id="@+id/tv_payTvBills"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pay TV Subscription"
+                    android:textSize="25sp"
+
+                    app:layout_constraintBottom_toBottomOf="@+id/im_tv"
+                    app:layout_constraintEnd_toStartOf="@+id/im_tv_next"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/im_tv"
+                    app:layout_constraintTop_toTopOf="@+id/im_tv" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cv_internet"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+
+            app:cardElevation="10dp"
+            app:layout_constraintBottom_toTopOf="@+id/cv_tv"
+            app:layout_constraintStart_toStartOf="@+id/cv_electricity"
+            app:layout_constraintTop_toBottomOf="@+id/cv_electricity">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+
+                <ImageView
+                    android:id="@+id/im_internet"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+
+
+                    app:layout_constraintEnd_toStartOf="@+id/tv_internetBills"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/internet_icon" />
+
+                <ImageView
+                    android:id="@+id/im_internetNext"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_internetBills"
+
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/tv_internetBills"
+                    app:layout_constraintTop_toTopOf="@+id/tv_internetBills"
+                    app:srcCompat="@drawable/next_icon" />
+
+                <TextView
+                    android:id="@+id/tv_internetBills"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Buy Internet Data"
+                    android:textSize="25sp"
+
+                    app:layout_constraintBottom_toBottomOf="@+id/im_internet"
+                    app:layout_constraintEnd_toStartOf="@+id/im_internetNext"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/im_internet"
+                    app:layout_constraintTop_toTopOf="@+id/im_internet" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cv_phone"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+
+            app:cardElevation="10dp"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/cv_tv"
+            app:layout_constraintTop_toBottomOf="@+id/cv_tv">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+
+
+                    app:layout_constraintEnd_toStartOf="@+id/textView4"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/mobile_icon" />
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView4"
+
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/textView4"
+                    app:layout_constraintTop_toTopOf="@+id/textView4"
+                    app:srcCompat="@drawable/next_icon" />
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Buy Phone Airtime"
+                    android:textSize="25sp"
+
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+                    app:layout_constraintEnd_toStartOf="@+id/imageView4"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/imageView3"
+                    app:layout_constraintTop_toTopOf="@+id/imageView3"
+                    app:layout_constraintVertical_bias="0.45999998" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cv_electricity"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+
+            app:cardElevation="10dp"
+            app:layout_constraintBottom_toTopOf="@+id/cv_internet"
+            app:layout_constraintTop_toTopOf="@+id/textView6"
+            app:layout_constraintVertical_bias="0.19999999"
+            app:layout_constraintVertical_chainStyle="packed"
+            tools:layout_editor_absoluteX="44dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+
+                <ImageView
+                    android:id="@+id/im_ele"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+
+                    android:layout_marginStart="10dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+
+
+                    app:layout_constraintEnd_toStartOf="@+id/tv_electricityBills"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+
+                    app:srcCompat="@drawable/electricity_icon" />
+
+                <ImageView
+                    android:id="@+id/im_next"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_electricityBills"
+
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/tv_electricityBills"
+                    app:layout_constraintTop_toTopOf="@+id/tv_electricityBills"
+                    app:srcCompat="@drawable/next_icon" />
+
+                <TextView
+                    android:id="@+id/tv_electricityBills"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pay Electricity Bills"
+                    android:textSize="25sp"
+
+                    app:layout_constraintBottom_toBottomOf="@+id/im_ele"
+                    app:layout_constraintEnd_toStartOf="@+id/im_next"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/im_ele"
+                    app:layout_constraintTop_toTopOf="@+id/im_ele" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/cv_electricity"
+android:layout_marginTop="350dp"
+            app:srcCompat="@drawable/city"
+            tools:layout_editor_absoluteX="0dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:shapeAppearance="@style/ShapeAppearance.MyApp.MediumComponent.Cut">
+
+    <RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+
+        android:fitsSystemWindows="true">
+
+        <ProgressBar
+
+            android:id="@+id/progress"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+android:visibility="gone"
+            android:layout_centerInParent="true"
+            />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="220dp"
+                android:layout_height="220dp"
+                android:src="@drawable/img_number_verification" />
+            <TextView
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="We would charge ₦100 for every recharge you make."
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                android:textColor="#666666" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Enter Recharge Amount"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"
+                android:textColor="#37474F"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="10dp"
+                    android:layout_height="0dp" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:enabled="false"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="₦"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"
+                    android:textColor="#37474F" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Amount"
+                    android:inputType="phone"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="100"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                    android:textColor="#263238"
+                    android:textStyle="bold">
+
+                    <requestFocus />
+
+                </com.google.android.material.textfield.TextInputEditText>
+
+            </LinearLayout>
+
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/bt_continue"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="CONTINUE"
+
+                android:textColor="@android:color/white"
+                app:cornerRadius="20dp" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_close"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:text="NO, OTHER TIME"
+                android:textColor="#999999" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</com.google.android.material.card.MaterialCardView>
+</layout>

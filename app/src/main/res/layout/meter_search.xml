@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        >
+
+        <LinearLayout
+            android:id="@+id/linear1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_search"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/tv_prepaid"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/edit_back"
+                android:hint="Enter Prepaid Number"
+                android:inputType="phone"
+                android:padding="10dp"
+                android:textColorHint="@color/colorPrimary"
+
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3">
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:background="#d3d3d3"
+
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="OR"
+                    android:textColor="@color/colorPrimary"
+
+                    android:textSize="20sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:background="#d3d3d3" />
+
+
+
+            </LinearLayout>
+            <EditText
+                android:id="@+id/tv_postpaid"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/edit_back"
+                android:hint="Enter Postpaid Number"
+                android:padding="10dp"
+
+                android:textColorHint="@color/colorPrimary"
+
+                />
+
+
+
+
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:visibility="invisible"
+
+            />
+
+        <TextView
+            android:id="@+id/tv_text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:padding="10dp"
+            android:text="Meter"
+            android:textColor="@color/colorPrimary"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/tv_text1"
+            android:layout_marginTop="2dp"
+            android:layout_toEndOf="@+id/tv_text1"
+            android:paddingTop="10dp"
+            android:text="Search"
+            android:textColor="@color/colorPrimaryLight"
+            android:textSize="25sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/tv_search"
+            android:layout_alignStart="@+id/tv_text1"
+            android:layout_alignEnd="@+id/tv_search"
+
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="#A3B5FF"
+
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/bt_search"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/linear1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:text="Search"
+            android:textColor="@color/colorPrimary"
+            android:textSize="18sp"
+            app:rippleColor="#586ECA"
+
+
+            />
+
+    </RelativeLayout>
+</layout>

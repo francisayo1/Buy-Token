@@ -1,6 +1,10 @@
 apply plugin: 'com.android.application'
 
 android {
+    repositories {
+        maven { url "https://jitpack.io" }
+    }
+
     compileSdkVersion 28
     defaultConfig {
         applicationId "com.feedco.note"
@@ -8,21 +12,66 @@ android {
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
     }
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            android.defaultConfig.vectorDrawables.useSupportLibrary = true
         }
+    }
+    dataBinding {
+        enabled = true
+    }
+    compileOptions {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
     }
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'com.android.support:appcompat-v7:28.0.0'
-    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.1'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'com.android.support.test:runner:1.0.2'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    androidTestImplementation 'androidx.test:runner:1.1.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0'
+
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+
+
+    api 'com.google.dagger:dagger:2.27'
+    annotationProcessor 'com.google.dagger:dagger-compiler:2.27'
+
+    implementation 'com.google.code.gson:gson:2.8.5'
+    // Retrofit & OkHttp
+    implementation 'com.squareup.retrofit2:retrofit:2.6.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.6.0'
+
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.10'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+
+    //Retrofit Call Object to Observable/Flowables
+    implementation "com.squareup.retrofit2:adapter-rxjava2:2.6.0"
+
+    //  This will allow us to convert Observables (or Flowables) into LiveData objects.
+    implementation "android.arch.lifecycle:reactivestreams:1.1.1"
+
+
+    implementation("com.squareup.okhttp3:logging-interceptor:4.5.0")
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'// For Kotlin use paging-runtime-ktx
+
+    implementation 'org.conscrypt:conscrypt-android:2.2.1'
+    implementation 'com.teamapt.monnify.sdk:monnify-android-sdk:1.0.16'
+
+    implementation "android.arch.persistence.room:runtime:1.1.1"
+    annotationProcessor "android.arch.persistence.room:compiler:1.1.1"
+
+    implementation 'com.github.AppIntro:AppIntro:6.0.0'
+
+
 }
